@@ -470,35 +470,53 @@ The project gave me experience taking software through the complete lifecycle:
 
 # 17. Screenshots
 
+The following screenshots showcase the production application across its
+different user roles and workflows.
+
 ## Owner Dashboard
 
-*Add screenshot here*
+![Owner Dashboard](screenshots/owner-dashboard.png)
 
-> Operational analytics, attendance visibility, member management and business metrics.
+> Centralized gym operations dashboard providing visibility into attendance,
+> enquiries, active members, business metrics and quick administrative actions.
 
 ## Member PWA
 
-*Add screenshot here*
+![Member PWA](screenshots/member-pwa.png)
 
-> Digital gym pass, workouts and progress tracking.
+> Mobile-first Progressive Web App for members, providing digital gym access,
+> today's workout, membership status, fitness test information and gym announcements.
 
 ## Trainer Portal
 
-*Add screenshot here*
+![Trainer Portal](screenshots/trainer-portal.png)
 
-> QR scanning, occupancy and workout management.
+> Trainer-focused workflow for shift attendance, member check-ins and QR-based
+> gym access validation.
 
-## Sales CRM
+## Progress Tracking
 
-*Add screenshot here*
+![Member Progress](screenshots/member-progress.png)
 
-> Lead pipeline and prospect management.
+> Members can review fitness assessment information including weight, BMI,
+> assessment history and visual progress trends.
+
+## Member Support
+
+![Member Support](screenshots/member-support.png)
+
+> Dedicated member support workflows covering enquiries, feedback, complaints
+> and referrals.
 
 ## QR Attendance
 
-*Add screenshot here*
+The member PWA provides a dynamic QR-based gym access flow, while the trainer
+portal provides the corresponding QR scanning workflow for attendance validation.
 
-> Time-bound digital gym access and attendance validation.
+![QR Attendance](screenshots/member-pwa.png)
+
+> Time-bound digital gym access combined with trainer-side QR scanning for
+> attendance management.
 
 ---
 
