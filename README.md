@@ -390,24 +390,19 @@ The API uses a consistent response structure containing success state, message, 
 
 ---
 
-# 14. Deployment
+## 14. Deployment
 
-The application is containerized for production deployment.
+The application is deployed on a VPS using containerized services managed through Docker.
 
-The documented deployment architecture includes:
+The production environment is structured as separate Docker containers:
 
 ```text
-Docker Compose
+Docker Environment
 │
 ├── Frontend
 ├── Spring Boot Backend
 ├── Nginx
-└── PostgreSQL
-```
-
-The services can be built and started together through Docker Compose, with Nginx handling production routing.
-
-The production environment was deployed on a VPS using containerized services.
+└── MySQL Database
 
 ---
 
