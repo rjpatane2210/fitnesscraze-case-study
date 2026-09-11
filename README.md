@@ -20,8 +20,24 @@ Instead of relying on paper attendance sheets, physical membership cards, WhatsA
 The application is designed as a mobile-friendly Progressive Web App, allowing users to access the system from smartphones, tablets, and computers without requiring a traditional native mobile application.
 
 ---
+# 2. Project Highlights
 
-# 2. The Problem
+- 📱 Production Progressive Web App
+- 👥 Role-based access for owners, trainers, reception/sales staff, and members
+- 📷 Time-bound QR-based gym attendance
+- 🏋️ Digital workout planning and assignment
+- 📊 Member fitness progress and assessment tracking
+- 💼 Lead management and sales pipeline
+- 📈 Owner-level operational analytics
+- 🛟 Member support workflows
+- 🔐 JWT-based authentication and role-based authorization
+- 🐳 Dockerized production deployment
+- 🌐 VPS deployment with Nginx
+- 🗄️ MySQL relational database
+
+---
+
+# 3. The Problem
 
 Traditional gym operations often depend on a mixture of:
 
@@ -40,7 +56,7 @@ FitnessCraze was designed to bring these workflows into one digital platform.
 
 ---
 
-# 3. The Solution
+# 4. The Solution
 
 FitnessCraze provides separate experiences based on the user's role:
 
@@ -82,7 +98,7 @@ The system implements four primary roles: `OWNER`, `TRAINER`, `RECEPTIONIST/SALE
 
 ---
 
-# 4. Key Features
+# 5. Key Features
 
 ## 4.1 Dynamic QR Attendance
 
@@ -116,7 +132,7 @@ Members can also perform an exit checkout using the application's scanning flow,
 
 ---
 
-# 5. Digital Workout Management
+# 6. Digital Workout Management
 
 FitnessCraze replaces manually written workout cards with structured digital workout programs.
 
@@ -136,7 +152,7 @@ The workout system is built around a hierarchical structure of workout templates
 
 ---
 
-# 6. Member Experience
+# 7. Member Experience
 
 The member portal provides a mobile-first experience for common gym activities.
 
@@ -155,7 +171,7 @@ Progress information is visualized through interactive charts, allowing members 
 
 ---
 
-# 7. Sales & Lead CRM
+# 8. Sales & Lead CRM
 
 FitnessCraze also includes a lightweight CRM for gym enquiries.
 
@@ -171,7 +187,7 @@ The Sales Portal implements this workflow through a dedicated lead management in
 
 ---
 
-# 8. Owner Dashboard
+# 9. Owner Dashboard
 
 The owner portal provides a centralized operational view of the gym.
 
@@ -190,7 +206,7 @@ The goal is to give gym owners a single place to understand what is happening ac
 
 ---
 
-# 9. Technical Architecture
+# 10. Technical Architecture
 
 FitnessCraze uses a decoupled client-server architecture.
 
@@ -219,7 +235,7 @@ FitnessCraze uses a decoupled client-server architecture.
                                          ▼
                                 ┌──────────────────┐
                                 │    Database      │
-                                │ PostgreSQL/MySQL  │
+                                │      MySQL       │
                                 └──────────────────┘
 ```
 
@@ -227,7 +243,7 @@ The frontend communicates with the backend through REST APIs, while Nginx acts a
 
 ---
 
-# 10. Technology Stack
+# 11. Technology Stack
 
 ## Frontend
 
@@ -267,7 +283,7 @@ The documented frontend and backend stack is based on React/Vite and Spring Boot
 
 ---
 
-# 11. Security
+# 12. Security
 
 Security was an important part of the application architecture.
 
@@ -319,7 +335,7 @@ The backend also uses granular permissions for operations such as user managemen
 
 ---
 
-# 12. Database Architecture
+# 13. Database Architecture
 
 The application uses a normalized relational database model.
 
@@ -343,7 +359,7 @@ This structure separates authentication, authorization, attendance, auditability
 
 ---
 
-# 13. REST API
+# 14. REST API
 
 The backend exposes REST APIs organized around application domains.
 
@@ -390,23 +406,30 @@ The API uses a consistent response structure containing success state, message, 
 
 ---
 
-## 14. Deployment
+## 15. Deployment
 
-The application is deployed on a VPS using containerized services managed through Docker.
+The application is deployed on a VPS using containerized services.
 
-The production environment is structured as separate Docker containers:
+The production environment consists of separate Docker containers:
 
 ```text
-Docker Environment
-│
-├── Frontend
-├── Spring Boot Backend
-├── Nginx
-└── MySQL Database
+                    VPS
+                     │
+              ┌──────┴──────┐
+              │    Nginx    │
+              │ Reverse Proxy│
+              └──────┬──────┘
+                     │
+          ┌──────────┴──────────┐
+          │                     │
+          ▼                     ▼
+   React Frontend        Spring Boot Backend
+                               │
+                               ▼
+                         MySQL Database
+---md
 
----
-
-# 15. Development Challenges
+# 16. Development Challenges
 
 Building a real application for a client introduced challenges that are different from typical tutorial or college projects.
 
@@ -442,9 +465,9 @@ This required thinking about business rules, security, edge cases, and the diffe
 
 ---
 
-# 16. My Role
+# 17. My Role
 
-As the developer on this freelance project, my work involved more than implementing individual screens.
+I worked on FitnessCraze as the primary developer for the client project, taking features from requirements through implementation, integration, testing and production deployment.
 
 My responsibilities included:
 
@@ -468,7 +491,7 @@ The project gave me experience taking software through the complete lifecycle:
 
 ---
 
-# 17. Screenshots
+# 18. Screenshots
 
 The following screenshots showcase the production application across its
 different user roles and workflows.
@@ -508,19 +531,10 @@ different user roles and workflows.
 > Dedicated member support workflows covering enquiries, feedback, complaints
 > and referrals.
 
-## QR Attendance
-
-The member PWA provides a dynamic QR-based gym access flow, while the trainer
-portal provides the corresponding QR scanning workflow for attendance validation.
-
-![QR Attendance](screenshots/member-pwa.png)
-
-> Time-bound digital gym access combined with trainer-side QR scanning for
-> attendance management.
 
 ---
 
-# 18. Why This Project Matters
+# 19. Why This Project Matters
 
 FitnessCraze was an important step in my development as a software engineer because it moved beyond isolated coding exercises.
 
@@ -547,7 +561,7 @@ Working on a real client application also highlighted an important lesson:
 
 ---
 
-# 19. Project Status
+# 20. Project Status
 
 **Production Release:** FitnessCraze v1.0
 
