@@ -3,8 +3,11 @@
 ## Production PWA for Gym & Fitness Center Operations
 
 **Project Type:** Freelance / Client Project
+
 **Application:** Progressive Web App (PWA)
+
 **Status:** Production
+
 **Source Code:** Private — Production Client Code
 
 ---
